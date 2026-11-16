@@ -12,7 +12,11 @@
             </nav>
         </div>
 
-        <a routerLink="/" class="logo">Sebastian<br>Buchholz</a>
+        <a routerLink="/" class="logo">
+            <img src="/icons/logo-mark.svg" alt="Logo Sebastian Buchholz">
+            <span class="logo-line"></span>
+            <span class="logo-text">Sebastian<br>Buchholz</span>
+        </a>
 
         <button class="burger" (click)="toggleMenu()">
             <img [src]="isMenuOpen() ? '/icons/menu-active.svg' : '/icons/menu.svg'" alt="Menü">

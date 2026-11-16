@@ -80,6 +80,22 @@ nav a:hover::after {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    height: 36px;
+}
+
+.logo-line {
+    width: 2px;
+    height: 44px;
+    background-color: #3dcfb6;
+}
+
+.logo-text {
     font-family: 'Karla', sans-serif;
     font-size: 1.25rem;
     font-weight: 700;
@@ -132,5 +148,10 @@ nav a:hover::after {
     .mobile-menu nav {
         flex-direction: column;
         gap: 16px;
+    }
+
+    .logo-line,
+    .logo-text {
+        display: none;
     }
 }
