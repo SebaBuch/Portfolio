@@ -1,1 +1,35 @@
-<p>header works!</p>
+<header>
+    <div class="header-content">
+        <div class="header-left">
+            <div class="language-switch">
+                <button [class.active]="languageService.currentLanguage()==='en'" (click)="languageService.setLanguage('en')">EN</button>
+                <button [class.active]="languageService.currentLanguage()==='de'" (click)="languageService.setLanguage('de')">DE</button>
+            </div>
+            <nav>
+                <a routerLink="/" fragment="about">{{ languageService.translate('navAbout') }}</a>
+                <a routerLink="/" fragment="skills">{{ languageService.translate('navSkills') }}</a>
+                <a routerLink="/" fragment="projects">{{ languageService.translate('navProjects') }}</a>
+            </nav>
+        </div>
+
+        <a routerLink="/" class="logo">Sebastian<br>Buchholz</a>
+
+        <button class="burger" (click)="toggleMenu()">
+            <img [src]="isMenuOpen() ? '/icons/menu-active.svg' : '/icons/menu.svg'" alt="Menü">
+        </button>
+    </div>
+
+    @if (isMenuOpen()){
+    <div class="mobile-menu">
+        <nav>
+            <a routerLink="/" fragment="about" (click)="closeMenu()">{{ languageService.translate('navAbout')}}</a>
+            <a routerLink="/" fragment="skills" (click)="closeMenu()">{{ languageService.translate('navSkills')}}</a>
+            <a routerLink="/" fragment="projects" (click)="closeMenu()">{{ languageService.translate('navProjects')}}</a>
+        </nav>
+        <div class="language-switch">
+            <button [class.active]="languageService.currentLanguage()==='en'" (click)="languageService.setLanguage('en')">EN</button>
+            <button [class.active]="languageService.currentLanguage()==='de'" (click)="languageService.setLanguage('de')">DE</button>
+        </div>
+    </div>
+    }
+</header>
