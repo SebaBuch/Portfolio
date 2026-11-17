@@ -130,3 +130,63 @@ h1 {
         transform: translateX(-50%);
     }
 }
+
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    .hero-side-left {
+        left: 80px;
+    }
+
+    .hero-side-right {
+        right: 80px;
+    }
+}
+
+@media(max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .hero-buttons {
+        gap: 16px;
+    }
+
+    .hero-side-left {
+        top: 62%;
+        left: 20px;
+    }
+
+    .hero-side-right {
+        top: 58%;
+        right: 20px;
+    }
+
+    .hero-mail {
+        display: none;
+    }
+
+    .hero-mail-icon {
+        display: block;
+    }
+
+    .marquee {
+        bottom: 80px;
+    }
+
+    .marquee-track span {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width:400px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}
