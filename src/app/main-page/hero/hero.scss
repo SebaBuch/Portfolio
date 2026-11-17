@@ -6,7 +6,7 @@
     contain: paint;
 }
 
-.hero-content{
+.hero-content {
     position: relative;
     max-width: 1440px;
     height: 100%;
@@ -16,17 +16,17 @@
     align-items: center;
 }
 
-.hero-text{
+.hero-text {
     text-align: center;
 }
 
-.hero-subtitle{
+.hero-subtitle {
     margin-bottom: 8px;
     font-family: 'Fira Code', monospace;
     font-size: 2rem;
 }
 
-h1{
+h1 {
     margin-bottom: 8px;
     font-family: 'Karla', sans-serif;
     font-size: 6rem;
@@ -34,14 +34,14 @@ h1{
     line-height: 1;
 }
 
-.hero-button{
+.hero-button {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 24px;
 }
 
-.hero-side{
+.hero-side {
     position: absolute;
     bottom: 0;
     display: flex;
@@ -50,37 +50,37 @@ h1{
     gap: 16px;
 }
 
-.hero-side-left{
+.hero-side-left {
     top: 62%;
     left: 160px;
 }
 
-.hero-side-right{
+.hero-side-right {
     top: 40%;
     right: 160px;
 }
 
-.side-line{
+.side-line {
     flex: 1;
     width: 1px;
     background-color: #ffffff;
 }
 
-.hero-mail{
+.hero-mail {
     writing-mode: vertical-rl;
     font-size: 1rem;
     transition: color 125ms ease-in-out;
 }
 
-.hero-mail:hover{
+.hero-mail:hover {
     color: #3dcfb6;
 }
 
-.hero-mail-icon{
+.hero-mail-icon {
     display: none;
 }
 
-.hero-github{
+.hero-github {
     width: 44px;
     height: 32px;
     margin-left: 12px;
@@ -89,6 +89,44 @@ h1{
     background-position: left center;
 }
 
-.hero-github:hover{
+.hero-github:hover {
     background-image: url('/icons/github-hover.svg');
+}
+
+.marquee {
+    position: absolute;
+    bottom: 120px;
+    left: -5px;
+    width: 110%;
+    padding: 12px 0;
+    background-color: #2e2e2e;
+    transform: rotate(-3deg);
+    display: flex;
+}
+
+.marquee-track {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    animation: marquee 60s linear infinite;
+}
+
+.marquee-track span {
+    padding: 0 24px;
+    color: #3dcfb6;
+    font-size: 1.5rem;
+}
+
+.marquee-track .marquee-dot {
+    font-size: 1rem;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
 }
