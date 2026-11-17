@@ -1,1 +1,40 @@
-<p>hero works!</p>
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <p class="hero-subtitle">Fullstack Developer</p>
+            <h1>Sebastian Buchholz</h1>
+            <div class="hero-buttons">
+                <a class="btn" routerLink="/" fragment="projects">{{ languageService.translate('heroButtonWork') }}</a>
+                <a class="btn" routerLink="/" fragment="contact">{{ languageService.translate('heroButtonContact')
+                    }}</a>
+            </div>
+        </div>
+
+        <div class="hero-side hero-side-left">
+            <a routerLink="/" fragment="about">
+                <img src="/icons/scroll-down.svg" alt="Nach unten scrollen">
+            </a>
+            <span class="side-line"></span>
+        </div>
+
+        <div class="hero-side hero-side-right">
+            <a class="hero-mail" href="mailto:sebastian.buchholz98@gmail.com">sebastian.buchholz98@gmail.com</a>
+            <a class="hero-mail-icon" href="mailto:sebastian.buchholz98@gmail.com">
+                <img src="/icons/mail-green.svg" alt="E-Mail">
+            </a>
+            <a class="hero-github" href="https://github.com/SebaBuch" target="_blank"></a>
+            <span class="side-line"></span>
+        </div>
+    </div>
+
+    <div class="marquee">
+        <div class="marquee-track">
+            @for (round of marqueeRounds; track $index){
+            @for (key of marqueeKeys; track key){
+            <span class="marquee-dot">•</span>
+            <span>{{ languageService.translate(key) }}</span>
+            }
+            }
+        </div>
+    </div>
+</section>
