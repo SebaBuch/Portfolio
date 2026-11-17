@@ -72,3 +72,44 @@ button {
 .d-none {
     display: none;
 }
+
+.content {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 160px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    background-color: transparent;
+    color: #ffffff;
+    font-family: 'Karla', sans-serif;
+    font-size: 1rem;
+    transition: all 125ms ease-in-out;
+}
+
+.btn:hover {
+    border-color: #3dcfb6;
+    color: #3dcfb6;
+}
+
+.section-label {
+    margin-bottom: 8px;
+    color: #3dcfb6;
+    font-size: 1rem;
+}
+
+@media(max-width: 1200px) {
+    .content {
+        padding: 0 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 0 20px;
+    }
+}
