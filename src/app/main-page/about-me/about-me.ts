@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LanguageService } from '../../shared/services/language-service';
 
 @Component({
   imports: [],
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './about-me.scss',
   templateUrl: './about-me.html',
 })
-export class AboutMe {}
+export class AboutMe {
+  constructor(public languageService: LanguageService) { }
+}

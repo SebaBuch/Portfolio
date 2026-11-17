@@ -1,1 +1,29 @@
-<p>about-me works!</p>
+<section class="about">
+    <div class="content about-content">
+        <div class="about-photo">
+            <div class="photo-placeholder">Foto</div>
+        </div>
+
+        <div class="about-text">
+            <p class="section-label">{{ languageService.translate('aboutLabel') }}</p>
+            <div class="about-card">
+                <h2>{{ languageService.translate('aboutTitle') }}</h2>
+                <p>{{ languageService.translate('aboutText') }}</p>
+                <ul>
+                    <li>
+                        <img src="/icons/about-location.svg" alt="">
+                        <span>{{ languageService.translate('aboutLocation') }}</span>
+                    </li>
+                    <li>
+                        <img src="/icons/about-mid.svg" alt="">
+                        <span>{{ languageService.translate('aboutMind') }}</span>
+                    </li>
+                    <li>
+                        <img src="/icons/about-quality.svg" alt="">
+                        <span>{{ languageService.translate('aboutQuality') }}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
