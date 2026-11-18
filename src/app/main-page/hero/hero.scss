@@ -2,7 +2,7 @@
     position: relative;
     height: 100vh;
     min-height: 600px;
-    background-color: linear-gradient(to bottom left, #08463b 0%, #1c1c1c 55%);
+    background: linear-gradient(to bottom left, #08463b 0%, #1c1c1c 55%);
     contain: paint;
 }
 
@@ -27,14 +27,14 @@
 }
 
 h1 {
-    margin-bottom: 8px;
+    margin-bottom: 32px;
     font-family: 'Karla', sans-serif;
     font-size: 6rem;
     font-weight: 400;
     line-height: 1;
 }
 
-.hero-button {
+.hero-buttons {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -96,7 +96,7 @@ h1 {
 .marquee {
     position: absolute;
     bottom: 120px;
-    left: -5px;
+    left: -5%;
     width: 110%;
     padding: 12px 0;
     background-color: #2e2e2e;
