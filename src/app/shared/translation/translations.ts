@@ -27,5 +27,25 @@ export const translations: { [key: string]: { de: string; en: string } } = {
     aboutQuality: {
         de: "[Platzhalter: Beschreibe kurz, wie du Probleme löst, z. B. analytisch, kreativ und ausdauernd.]",
         en: "[Placeholder: Describe how you solve problems, e.g. analytical, creative and persistent.]"
+    },
+
+    skillsLabel: { de: "Technologien", en: "Technologies" },
+    skillsText: {
+        de: "[Platzhalter]",
+        en: "[Placeholder]"
+    },
+    skillsAnotherStart: { de: "Du brauchst eine", en: "You need" },
+    skillsAnotherHighlight: { de: "weitere Fähigkeit?", en: "another skill?" },
+    skillsContact: {
+        de: "Kontaktiere mich gerne. Ich freue mich darauf, mein Wissen zu erweitern.",
+        en: "Feel free to contact me. I look forward to expanding on my previous knowledge."
+    },
+    skillsButton: { de: "Lass uns reden", en: "Let's Talk" },
+    skillsBackendToolTip: { de: "[Platzhalter]", en: "[Placeholder]" },
+
+    projectsTitle: { de: "Ausgewählte Projekte", en: "Featured Projects" },
+    projectsIntro: {
+        de: "Hier findest du eine Auswahl meiner Arbeiten. Probier die Projekte gerne aus.",
+        en: "Explore a selection of my work here. Interact with projects to see my skills in action."
     }
 };
