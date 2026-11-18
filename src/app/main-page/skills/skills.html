@@ -1,1 +1,31 @@
-<p>skills works!</p>
+<section class="skills">
+    <div class="content skills-content">
+        <div class="skills-text">
+            <p class="section-label">{{ languageService.translate('skillsLabel') }}</p>
+            <div class="skills-card">
+                <h2>Skill Set</h2>
+                <p>{{ languageService.translate('skillsText') }}</p>
+                <h3>
+                    {{ languageService.translate('skillsAnotherStart') }}
+                    <span class="highlight">{{ languageService.translate('skillsAnotherHighlight') }}</span>
+                </h3>
+                <p>{{ languageService.translate('skillsContact') }}</p>
+                <a class="btn" routerLink="/" fragment="contact">{{ languageService.translate('skillsButton') }}</a>
+            </div>
+        </div>
+
+        <div class="skills-icon">
+            @for (skill of skills; track skill.name){
+                <div class="skill">
+                    <img [src]="skill.icon" [alt]="skill.name">
+                    <span>{{ skill.name }}</span>
+                </div>
+            }
+            <div class="skill skill-backend">
+                <div class="tooltip">{{ languageService.translate('skillsBackendTooltip') }}</div>
+                <img src="/icons/skill-backend.svg" alt="Backend">
+                <span>Backend</span>
+            </div>
+        </div>
+    </div>
+</section>
