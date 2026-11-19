@@ -1,0 +1,102 @@
+projects {
+    padding: 120px 0;
+}
+
+.projects h2 {
+    color: #3dcfb6;
+    font-size: 4rem;
+}
+
+.projects-intro {
+    max-width: 480px;
+    margin: 16px 0 48px;
+    line-height: 1.5;
+}
+
+.project-area {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.project-list {
+    flex: 2;
+    border-top: 1px solid #3dcfb6;
+}
+
+.project-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 28px 24px;
+    border-bottom: 1px solid #3dcfb6;
+    cursor: pointer;
+    transition: background-color 125ms ease-in-out;
+}
+
+.project-row:hover {
+    background-color: #2f5b54;
+}
+
+.project-row h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.125rem;
+}
+
+.arrow {
+    width: 12px;
+    opacity: 0;
+    transition: opacity 125ms ease-in-out;
+}
+
+.project-row:hover .arrow {
+    opacity: 1;
+}
+
+.project-tech {
+    font-size: 0.875rem;
+}
+
+.pipe {
+    color: #3dcfb6;
+}
+
+.project-preview {
+    flex: 1;
+    height: 200px;
+}
+
+.preview-placeholder {
+    height: 100%;
+    border-radius: 16px;
+    background: linear-gradient(160deg, #8a8a8a 0%, #3c3c3c 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .projects {
+        padding: 72px 0;
+    }
+
+    projects h2 {
+        font-size: 2.5rem;
+    }
+
+    .project-preview {
+        display: none;
+    }
+
+    .project-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 20px 8px;
+    }
+}
