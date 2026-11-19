@@ -43,5 +43,16 @@ export const translations: { [key: string]: { de: string; en: string } } = {
     projectsIntro: {
         de: "Hier findest du eine Auswahl meiner Arbeiten. Probier die Projekte gerne aus.",
         en: "Explore a selection of my work here. Interact with projects to see my skills in action."
-    }
+    },
+    projectQuestion: { de: "Worum geht es in diesem Projekt?", en: "What is this project about?" },
+    projectNext: { de: "Nächstes Projekt", en: "Next project" },
+    projectLiveTest: { de: "Live Test", en: "Live Test" },
+    projectPolloLocoDescription: { de: "Platzhalter", en: "Placeholder" },
+    projectPokedexDescription: { de: "Platzhalter", en: "Placeholder" },
+    projectBestellAppDescription: { de: "Platzhalter", en: "Placeholder" },
+
+    referencesTitle: { de: "Was meine Kollegen über mich sagen", en: "What my colleagues say about me" },
+    referenceText1: { de: "Platzhalter", en: "Placeholder" },
+    referenceText2: { de: "Platzhalter", en: "Placeholder" },
+    referenceText3: { de: "Platzhalter", en: "Placeholder" }
 };
