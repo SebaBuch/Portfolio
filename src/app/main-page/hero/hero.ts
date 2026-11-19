@@ -9,7 +9,7 @@ import { LanguageService } from '../../shared/services/language-service';
   templateUrl: './hero.html',
 })
 export class Hero {
-  marqueeKeys = ['marqueeRemote', 'marqueeDeveloper', 'marqueeLocation', 'marqueeOpen'];
+  marqueeKeys = ['marqueeDeveloper', 'marqueeLocation', 'marqueeOpen'];
   marqueeRounds = [1, 2, 3, 4];
 
   constructor(public languageService: LanguageService) { }
