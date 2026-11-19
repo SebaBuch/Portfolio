@@ -41,7 +41,7 @@ export const translations: { [key: string]: { de: string; en: string } } = {
         en: "Feel free to contact me. I look forward to expanding on my previous knowledge."
     },
     skillsButton: { de: "Lass uns reden", en: "Let's Talk" },
-    skillsBackendToolTip: { de: "[Platzhalter]", en: "[Placeholder]" },
+    skillsBackendTooltip: { de: "[Platzhalter]", en: "[Placeholder]" },
 
     projectsTitle: { de: "Ausgewählte Projekte", en: "Featured Projects" },
     projectsIntro: {
