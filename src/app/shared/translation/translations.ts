@@ -33,12 +33,9 @@ export const translations: { [key: string]: { de: string; en: string } } = {
         de: "[Platzhalter]",
         en: "[Placeholder]"
     },
-    skillsAnotherStart: { de: "Du brauchst eine", en: "You need" },
-    skillsAnotherHighlight: { de: "weitere Fähigkeit?", en: "another skill?" },
-    skillsContact: {
-        de: "Kontaktiere mich gerne. Ich freue mich darauf, mein Wissen zu erweitern.",
-        en: "Feel free to contact me. I look forward to expanding on my previous knowledge."
-    },
+    skillsAnotherStart: { de: "Platzhalter", en: "Placeholder" },
+    skillsAnotherHighlight: { de: "Platzhalter", en: "Placeholder" },
+    skillsContact: { de: "Platzhalter", en: "Placeholder" },
     skillsButton: { de: "Lass uns reden", en: "Let's Talk" },
     skillsBackendTooltip: { de: "[Platzhalter]", en: "[Placeholder]" },
 
