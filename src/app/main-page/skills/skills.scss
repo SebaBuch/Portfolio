@@ -1,0 +1,122 @@
+.skills {
+    padding: 120px 0;
+}
+
+.skills-content {
+    display: flex;
+    align-items: flex-end;
+    gap: 60px;
+}
+
+.skills-text {
+    flex: 1;
+}
+
+.skilss-card {
+    padding: 40px;
+    border: 1px solid #3dcfb6;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #1f2e2b 0%, #1c1c1c 70%);
+}
+
+.skills-card h2 {
+    margin-bottom: 24px;
+    color: #3dcfb6;
+    font-size: 4rem;
+}
+
+.skills-card p {
+    line-height: 1.5;
+}
+
+.skills-card h3 {
+    margin: 24px 0 8px;
+    font-size: 1.5rem;
+}
+
+.highlight {
+    color: #3dcfb6;
+}
+
+.skills-card .btn {
+    margin-top: 24px;
+}
+
+.skills-icons {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+}
+
+.skill {
+    position: relative;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.skill img {
+    width: 60px;
+    height: 60px;
+    transition: transform 125ms ease-in-out;
+}
+
+.skill span {
+    font-family: 'Fire Code', monospace;
+    font-size: 0.875rem;
+}
+
+.skill:hover img {
+    transform: translateY(-6px);
+}
+
+.skill-backend span {
+    color: #3dcfb6;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 100%;
+    margin-bottom: 12px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    color: #3dcfb6;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 150ms ease-in-out;
+}
+
+.skill-backend:hover .tooltip {
+    opacity: 1;
+}
+
+@media (max-width: 1024px) {
+    .skills-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills {
+        padding: 72px 0;
+    }
+
+    .skills-card {
+        padding: 24px;
+    }
+
+    .skills-card h2 {
+        font-size: 2.5rem;
+    }
+
+    .skill {
+        width: 33.33%;
+    }
+}
