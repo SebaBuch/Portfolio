@@ -28,7 +28,7 @@ export class Projects {
   }
 
   closeProject() {
-    this.selectIndex.set(-1)
+    this.selectedIndex.set(-1)
   }
 
   nextProject() {

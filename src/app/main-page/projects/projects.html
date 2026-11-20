@@ -7,7 +7,8 @@
         <div class="projects-area">
             <div class="project-list">
                 @for (project of projects; track project.name; let i = $index){
-                <div class="project-row" (mouseenter)="showPreview(i)" (mouseleave)="hidePreview()">
+                <div class="project-row" (mouseenter)="showPreview(i)" (mouseleave)="hidePreview()"
+                    (click)="openProject(i)">
                     <h3>
                         {{ project.name }}
                         <img src="/icons/arrow-outward.svg" alt="" class="arrow">
@@ -31,4 +32,52 @@
             </div>
         </div>
     </div>
+
+    @if (selectedIndex() !== -1){
+    @let project = projects[selectedIndex()];
+    <div class="overlay" (click)="closeProject()">
+        <div class="dialog" (click)="$event.stopPropagation()">
+            <button class="close-btn" (click)="closeProject()" aria-label="Schließen"></button>
+
+            <div class="dialog-main">
+                <div class="dialog-info">
+                    <span class="project-number">{{ getProjectNumber() }}</span>
+                    <h3 class="project-title">{{ project.name }}</h3>
+                    <p class="project-question">{{ languageService.translate('projectQuestion') }}</p>
+                    <p class="project-description">{{ languageService.translate(project.descriptionKey) }}</p>
+
+                    <div class="project-techs">
+                        @for (tech of project.technologies; track tech){
+                        <span>
+                            @if (getTechIcon(tech) !== ''){
+                            <img [src]="getTechIcon(tech)" alt="">
+                            }
+                            {{ tech }}
+                        </span>
+                        }
+                    </div>
+
+                    <div class="dialog-buttons">
+                        <a [href]="project.github" class="btn" target="_blank">
+                            GitHub <img src="/icons/arrow-outward.svg" alt="">
+                        </a>
+                        @if (project.live !== ''){
+                        <a [href]="project.live" class="btn" target="_blank">
+                            {{ languageService.translate('projectLiveTest') }} <img src="/icons/arrow-outward.svg"
+                                alt="">
+                        </a>
+                        }
+                    </div>
+                </div>
+
+                <div class="dialog-image">{{ project.name }}</div>
+            </div>
+
+            <button class="next-btn" (click)="nextProject()">
+                {{ languageService.translate('projectNext') }}
+                <img src="/icons/arrow-next-project.svg" alt="">
+            </button>
+        </div>
+    </div>
+    }
 </section>
