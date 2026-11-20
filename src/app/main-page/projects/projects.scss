@@ -80,6 +80,148 @@
     font-weight: 700;
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.dialog {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    padding: 56px;
+    border: 1px solid #3dcfb6;
+    border-radius: 30px;
+    background: linear-gradient(to bottom left, #08463b 0%, #1c1c1c 60%);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    background-color: transparent;
+    background-image: url('/icons/close.svg');
+    background-repeat: no-repeat;
+}
+
+.close-btn:hover {
+    background-image: url('/icons/close-hover.svg');
+}
+
+.dialog-main {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.dialog-info {
+    flex: 1;
+}
+
+.project-number {
+    display: block;
+    color: #3dcfb6;
+    font-size: 5.5rem;
+    line-height: 1;
+}
+
+.project-title {
+    margin-bottom: 32px;
+    font-size: 3rem;
+}
+
+.project-question {
+    margin-bottom: 12px;
+    color: #3dcfb6;
+    font-family: 'Fira Code', monospace;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.project-description {
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.project-techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    margin-bottom: 32px;
+}
+
+.project-techs span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+}
+
+.project-techs img {
+    width: 24px;
+    height: 24px;
+}
+
+.dialog-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.dialog-buttons .btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dialog-buttons .btn img {
+    width: 12px;
+}
+
+.dialog-image {
+    flex: 1;
+    aspect-ratio: 16 / 10;
+    border-radius: 20px;
+    background: linear-gradient(160deg, #8a8a8a 0%, #3c3c3c 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fira Code', monospace;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.next-btn {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border: none;
+    background-color: transparent;
+    color: #3dcfb6;
+    font-size: 1rem;
+    transition: color 125ms ease-in-out;
+}
+
+.next-btn:hover {
+    color: #ffffff;
+}
+
 @media (max-width: 768px) {
     .projects {
         padding: 72px 0;
@@ -98,5 +240,40 @@
         align-items: flex-start;
         gap: 8px;
         padding: 20px 8px;
+    }
+
+    .dialog {
+        padding: 56px 20px 20px;
+        gap: 16px;
+    }
+
+    .dialog-main {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    .dialog-image {
+        width: 100%;
+    }
+
+    .project-number {
+        font-size: 3rem;
+    }
+
+    .project-title {
+        margin-bottom: 16px;
+        font-size: 2rem;
+    }
+
+    .project-question {
+        font-size: 1.125rem;
+    }
+
+    .project-description {
+        margin-bottom: 16px;
+    }
+
+    .project-techs {
+        margin-bottom: 20px;
     }
 }
