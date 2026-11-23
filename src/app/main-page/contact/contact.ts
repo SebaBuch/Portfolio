@@ -13,7 +13,7 @@ export class Contact {
   name = '';
   email = '';
   message = '';
-  pivacyAccepted = false;
+  privacyAccepted = false;
   nameTouched = false;
   emailTouched = false;
   messageTouched = false;
@@ -61,7 +61,7 @@ export class Contact {
   getRequestOptions() {
     return {
       method: 'POST',
-      headers: { 'Content_Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name: this.name, email: this.email, message: this.message })
     };
   }
