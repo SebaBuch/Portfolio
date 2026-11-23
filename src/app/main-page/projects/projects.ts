@@ -62,7 +62,7 @@ export class Projects {
         icon = '/icons/tech-angular.svg';
         break;
       case 'Firebase':
-        icon = '/icons/tech-Firebase.svg';
+        icon = '/icons/tech-firebase.svg';
         break;
     }
     return icon;

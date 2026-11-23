@@ -1,1 +1,36 @@
-<p>references works!</p>
+<section class="references">
+    <h3>{{ languageService.translate('referencesTitle') }}</h3>
+
+    @let previous = references[getPreviousIndex()];
+    @let current = references[currentIndex()];
+    @let next = references[getNextIndex()];
+
+    <div class="ref-track">
+        <div class="ref-card ref-side">
+            <p class="ref-text">{{ languageService.translate(previous.textKey) }}</p>
+            <p class="ref-author">{{ previous.author }}</p>
+        </div>
+
+        <div class="ref-card active">
+            <img class="quote" src="/icons/quotes.svg" alt="">
+            <p class="ref-text">{{ languageService.translate(current.textKey) }}</p>
+            <p class="ref-author">{{ current.author }}</p>
+        </div>
+
+        <div class="ref-card ref-side">
+            <p class="ref-text">{{ languageService.translate(next.textKey) }}</p>
+            <p class="ref-author">{{ next.author }}</p>
+        </div>
+    </div>
+
+    <div class="ref-controls">
+        <button class="arrow-btn arrow-left" (click)="showPrevious()" aria-label="Vorherige Referenz"></button>
+        <div class="dots">
+            @for (reference of references; track $index; let i = $index) {
+            <button class="dot" [class.active]="i === currentIndex()" (click)="showReference(i)"
+                aria-label="Referenz anzeigen"></button>
+            }
+        </div>
+        <button class="arrow-btn arrow-right" (click)="showNext()" aria-label="Nächste Referenz"></button>
+    </div>
+</section>
