@@ -1,1 +1,66 @@
-<p>contact works!</p>
+<section class="contact">
+    <div class="content contact-content">
+        <div class="contact-text">
+            <p class="section-label">{{ languageService.translate('contactLabel') }}</p>
+            <h2>{{ languageService.translate('contactTitle') }}</h2>
+            <h3>{{ languageService.translate('contactQuestion') }}</h3>
+            <p>{{ languageService.translate('contactText') }}</p>
+            <p>
+                {{ languageService.translate('contactNeed') }}
+                <a routerLink="/" fragment="contact">{{ languageService.translate('contactNeedLink') }}</a>
+            </p>
+        </div>
+
+        <form class="contact-form" (ngSubmit)="sendForm()">
+            <div class="field">
+                <label for="name">{{ languageService.translate('formNameLabel') }}</label>
+                <input type="text" id="name" name="name" autocomplete="name" [(ngModel)]="name"
+                    (blur)="nameTouched = true" [placeholder]="languageService.translate('formNamePlaceholder')">
+                <p class="error-message">{{ showNameError() ? languageService.translate('formNameError') : '' }}</p>
+            </div>
+
+            <div class="field">
+                <label for="email">{{ languageService.translate('formEmailLabel') }}</label>
+                <input id="email" name="email" type="email" autocomplete="email" [(ngModel)]="email"
+                    (blur)="emailTouched = true" [placeholder]="languageService.translate('formEmailPlaceholder')">
+                <p class="error-message">{{ showEmailError() ? languageService.translate('formEmailError') : '' }}</p>
+            </div>
+
+            <div class="field field-last">
+                <label for="message">{{ languageService.translate('formMessageLabel') }}</label>
+                <textarea id="message" name="message" rows="4" [(ngModel)]="message" (blur)="messageTouched = true"
+                    [placeholder]="languageService.translate('formMessagePlaceholder')"></textarea>
+                <p class="error-message">{{ showMessageError() ? languageService.translate('formMessageError') : '' }}
+                </p>
+            </div>
+
+            <label class="privacy">
+                <input type="checkbox" name="privacy" [(ngModel)]="privacyAccepted" (change)="privacyTouched = true">
+                <span class="checkbox-icon" [class.checked]="privacyAccepted"></span>
+                <span>
+                    {{ languageService.translate('formPrivacyStart') }}
+                    <a routerLink="/privacy-policy">{{ languageService.translate('formPrivacyLink') }}</a>
+                    {{ languageService.translate('formPrivacyEnd') }}
+                </span>
+            </label>
+            <p class="error-message privacy-error">{{ showPrivacyError() ? languageService.translate('formPrivacyError')
+                : '' }}</p>
+
+            <div class="send-row">
+                <button class="btn" type="submit" [disabled]="!isFormValid() || status() === 'sending'">
+                    {{ status() === 'sending' ? languageService.translate('formSending') :
+                    languageService.translate('formSend') }}
+                </button>
+            </div>
+
+            <p class="feedback" [class.success]="status() === 'success'" [class.failure]="status() === 'error'">
+                @if (status() === 'success') {
+                {{ languageService.translate('formSuccess') }}
+                }
+                @if (status() === 'error') {
+                {{ languageService.translate('formFailure') }}
+                }
+            </p>
+        </form>
+    </div>
+</section>
