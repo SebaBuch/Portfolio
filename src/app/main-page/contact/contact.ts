@@ -57,4 +57,40 @@ export class Contact {
   showPrivacyError(): boolean {
     return this.privacyTouched && !this.privacyAccepted;
   }
+
+  getRequestOptions() {
+    return {
+      method: 'POST',
+      headers: { 'Content_Type': 'application/json' },
+      body: JSON.stringify({ name: this.name, email: this.email, message: this.message })
+    };
+  }
+
+  async sendForm() {
+    if (!this.isFormValid()) {
+      return;
+    }
+    this.status.set('sending');
+    try {
+      const response = await fetch('/sendMail.php', this.getRequestOptions());
+      if (!response.ok) {
+        throw new Error('Server error');
+      }
+      this.status.set('success');
+      this.resetForm();
+    } catch (error) {
+      this.status.set('error');
+    }
+  }
+
+  resetForm() {
+    this.name = '';
+    this.email = '';
+    this.message = '';
+    this.privacyAccepted = false;
+    this.nameTouched = false;
+    this.emailTouched = false;
+    this.messageTouched = false;
+    this.privacyTouched = false;
+  }
 }
