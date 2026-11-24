@@ -102,6 +102,46 @@ button {
     font-size: 1rem;
 }
 
+.legal {
+    min-height: 100vh;
+    padding: 160px 0 80px;
+    background-color: linear-gradient(to bottom left, #08463b 0%, #1c1c1c 40%);
+}
+
+.legal-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.legal h1 {
+    margin-bottom: 48px;
+    color: #3dcfb6;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.legal h2 {
+    margin: 32px 0 8px;
+    font-family: 'Karla', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.legal p,
+.legal li {
+    color: #3dcfb6;
+    line-height: 1.5;
+}
+
+.legal ul {
+    padding-left: 20px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
 @media(max-width: 1200px) {
     .content {
         padding: 0 80px;
@@ -111,5 +151,14 @@ button {
 @media (max-width: 768px) {
     .content {
         padding: 0 20px;
+    }
+
+    .legal {
+        padding: 120px 0 60px;
+    }
+
+    .legal h1 {
+        font-size: 2.5rem;
+        text-align: left;
     }
 }
