@@ -1,0 +1,90 @@
+footer{
+    padding: 48px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+}
+
+.footer-logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo img{
+    height: 36px;
+}
+
+.logo-line{
+    width: 2px;
+    height: 44px;
+    background-color: #3dcfb6;
+}
+
+.logo-text{
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.footer-info{
+    margin-top: 16px;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.copyright{
+    color: #3dcfb6;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.875rem;
+}
+
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-links a{
+    position: relative;
+    font-size: 0.875rem;
+    transition: color 125ms ease-in-out;
+}
+
+.footer-links a::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -14px;
+    width: 6px;
+    height: 6px;
+    margin-top: -3px;
+    border-radius: 50%;
+    background-color: #3dcfb6;
+    opacity: 0;
+    transition: opacity 125ms ease-in-out;
+}
+
+.footer-links a:hover{
+    color: #3dcfb6;
+}
+
+.footer-links a:hover::before{
+    opacity: 1;
+}
+
+@media (max-width: 768px){
+    .footer-content{
+        flex-wrap: wrap;
+    }
+
+    .copyright{
+        order: 3;
+        width: 100%;
+        text-align: center;
+    }
+}
