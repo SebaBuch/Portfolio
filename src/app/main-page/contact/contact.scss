@@ -167,6 +167,13 @@
     color: #e05a5a;
 }
 
+@media (max-width: 1024px) {
+    .contact-content {
+        flex-direction: column;
+        gap: 48px;
+    }
+}
+
 @media (max-width: 768px) {
     .contact {
         padding: 72px 0;

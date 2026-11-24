@@ -84,6 +84,18 @@
     flex-shrink: 0;
 }
 
+@media (max-width: 1024px) {
+    .about-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .about-photo {
+        width: 100%;
+        max-width: 480px;
+    }
+}
+
 @media (max-width: 768px) {
     .about {
         padding: 72px 0;
