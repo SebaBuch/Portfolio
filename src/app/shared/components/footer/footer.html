@@ -1,1 +1,21 @@
-<p>footer works!</p>
+<footer>
+    <div class="content footer-content">
+        <div class="footer-left">
+            <a routerLink="/" class="footer-logo">
+                <img src="/icons/logo-mark.svg" alt="Logo Sebastian Buchholz">
+                <span class="logo-line"></span>
+                <span class="logo-text">Sebastian<br>Buchholz</span>
+            </a>
+            <p class="footer-info">Fullstack Developer<br>Hennef, {{ languageService.translate('footerCountry') }}</p>
+        </div>
+
+        <p class="copyright">© Sebastian Buchholz {{ year }}</p>
+
+        <nav class="footer-links">
+            <a href="https://github.com/SebaBuch" target="_blank">GitHub</a>
+            <a href="mailto:sebastian.buchholz98@gmail.com">E-Mail</a>
+            <a routerLink="/imprint">{{ languageService.translate('footerImprint') }}</a>
+            <a routerLink="/privacy-policy">{{ languageService.translate('footerPrivacy') }}</a>
+        </nav>
+    </div>
+</footer>

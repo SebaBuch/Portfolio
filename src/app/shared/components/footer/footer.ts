@@ -1,9 +1,15 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { LanguageService } from '../../services/language-service';
 
 @Component({
-  imports: [],
   selector: 'app-footer',
-  styleUrl: './footer.scss',
+  imports: [RouterLink],
   templateUrl: './footer.html',
+  styleUrl: './footer.scss'
 })
-export class Footer {}
+export class Footer {
+  year = new Date().getFullYear();
+
+  constructor(public languageService: LanguageService) { }
+}

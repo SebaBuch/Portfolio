@@ -85,5 +85,9 @@ export const translations: { [key: string]: { de: string; en: string } } = {
     formFailure: {
         de: "Da ist etwas schiefgelaufen. Bitte versuche es später erneut.",
         en: "Something went wrong. Please try again later."
-    }
+    },
+
+    footerCountry: { de: "Deutschland", en: "Germany" },
+    footerImprint: { de: "Impressum", en: "Legal Notice" },
+    footerPrivacy: { de: "Datenschutz", en: "Privacy Policy" }
 };
