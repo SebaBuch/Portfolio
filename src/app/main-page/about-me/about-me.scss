@@ -43,6 +43,15 @@
     font-family: 'Fira Code', monospace;
 }
 
+.photo {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 30px;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
 .about-text {
     flex: 1;
 }

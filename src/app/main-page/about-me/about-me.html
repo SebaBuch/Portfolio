@@ -1,7 +1,11 @@
 <section class="about">
     <div class="content about-content">
         <div class="about-photo">
+            @if (photo !== ''){
+            <img [src]="photo" alt="Sebastian Buchholz" class="photo">
+            }@else {
             <div class="photo-placeholder">Foto</div>
+            }
         </div>
 
         <div class="about-text">

@@ -8,5 +8,7 @@ import { LanguageService } from '../../shared/services/language-service';
   templateUrl: './about-me.html',
 })
 export class AboutMe {
+photo = '/images/sebastian.webp';
+
   constructor(public languageService: LanguageService) { }
 }
