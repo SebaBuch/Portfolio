@@ -27,7 +27,12 @@
 
             <div class="project-preview">
                 @if (hoveredIndex() !== -1) {
-                <div class="preview-placeholder">{{ projects[hoveredIndex()].name }}</div>
+                @let hovered = projects[hoveredIndex()];
+                @if (hovered.image !== '') {
+                <img class="preview-image" [src]="hovered.image" [alt]="hovered.name">
+                } @else {
+                <div class="preview-placeholder">{{ hovered.name }}</div>
+                }
                 }
             </div>
         </div>
@@ -70,7 +75,13 @@
                     </div>
                 </div>
 
-                <div class="dialog-image">{{ project.name }}</div>
+                <div class="dialog-image">
+                    @if (project.image !== '') {
+                    <img [src]="project.image" [alt]="project.name">
+                    } @else {
+                    {{ project.name }}
+                    }
+                </div>
             </div>
 
             <button class="next-btn" (click)="nextProject()">
