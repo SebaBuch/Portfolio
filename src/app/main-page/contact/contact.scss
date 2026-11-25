@@ -192,3 +192,9 @@
         padding: 20px 8px 4px;
     }
 }
+
+@media (max-width: 480px) {
+    .contact-text h2 {
+        font-size: 1.75rem;
+    }
+}
