@@ -145,6 +145,24 @@ h1 {
     }
 }
 
+@media (max-width: 950px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    .hero-side-right {
+        top: 58%;
+    }
+
+    .hero-mail {
+        display: none;
+    }
+
+    .hero-mail-icon {
+        display: block;
+    }
+}
+
 @media(max-width: 768px) {
     h1 {
         font-size: 3rem;
