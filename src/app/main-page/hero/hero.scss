@@ -41,6 +41,37 @@ h1 {
     gap: 24px;
 }
 
+.pulse-text {
+    display: inline-block;
+    animation: pulse-text 1.2s ease-in-out infinite;
+}
+
+.hero-buttons .btn:last-child .pulse-text {
+    animation-delay: 0.5s;
+}
+
+.hero-buttons .btn:hover .pulse-text {
+    animation: none;
+}
+
+@keyframes pulse-text {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pulse-text {
+        animation: none;
+    }
+}
+
 .hero-side {
     position: absolute;
     bottom: 0;
