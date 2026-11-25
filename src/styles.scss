@@ -133,6 +133,31 @@ button {
     line-height: 1.5;
 }
 
+.legal h3 {
+    margin: 24px 0 8px;
+    font-family: 'Karla', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.legal h4 {
+    margin: 16px 0 4px;
+    font-family: 'Karla', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.legal p,
+.legal li {
+    margin-bottom: 8px;
+    color: #3dcfb6;
+    line-height: 1.5;
+}
+
+.legal a {
+    text-decoration: underline;
+}
+
 .legal ul {
     padding-left: 20px;
 }
