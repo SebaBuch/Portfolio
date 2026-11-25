@@ -24,7 +24,7 @@ $recipient = 'sebastian.buchholz98@gmail.com';
 $subject = '=?UTF-8?B?' . base64_encode('Kontaktanfrage von ' . $name) . '?=';
 $body = "Name: $name\nE-Mail: $email\n\nNachricht:\n$message";
 
-$headers = "From: noreply@DEINE-DOMAIN.de\r\n";
+$headers = "From: noreply@sebastian-buchholz.de\r\n";
 $headers .= "Reply-To: $email\r\n";
 $headers .= "Content-Type: text/plain; charset=utf-8\r\n";
 

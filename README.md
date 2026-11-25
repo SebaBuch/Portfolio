@@ -3,7 +3,7 @@
 Personal portfolio website of Sebastian Buchholz, Junior Fullstack Developer.
 Built with Angular as part of the Developer Akademie.
 
-**Live:** _coming soon_
+**Live:** [sebastian-buchholz.de](https://sebastian-buchholz.de)
 
 ## Features
 
