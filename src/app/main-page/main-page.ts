@@ -6,6 +6,9 @@ import { Projects } from "./projects/projects";
 import { References } from "./references/references";
 import { Contact } from "./contact/contact";
 
+/**
+ * Main page that puts all sections together: hero, about me, skills, projects, references and contact.
+ */
 @Component({
   selector: 'app-main-page',
   imports: [Hero, AboutMe, Skills, Projects, References, Contact],

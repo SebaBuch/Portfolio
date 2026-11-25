@@ -1,59 +1,84 @@
-# Portfolio
+# Portfolio – Sebastian Buchholz
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.6.
+Personal portfolio website of Sebastian Buchholz, Junior Fullstack Developer.
+Built with Angular as part of the Developer Akademie.
 
-## Development server
+**Live:** _coming soon_
 
-To start a local development server, run:
+## Features
 
-```bash
-ng serve
+- Bilingual (German / English) with a language switch in the header
+- Responsive design for mobile, tablet, desktop and widescreen (from 1440px)
+- Hero section with animated marquee
+- Project list with hover preview and a detail overlay
+- References slider
+- Contact form with validation on blur and email sending via PHP
+- Legal notice and privacy policy
+- Green glow that follows the mouse (desktop only)
+
+## Tech Stack
+
+- Angular 22 (standalone components, signals, `@if` / `@for`)
+- TypeScript
+- SCSS
+- PHP (contact form)
+
+## Project Structure
+
+```
+src/app/
+├── main-page/            # Main page and its sections
+│   ├── hero/
+│   ├── about-me/
+│   ├── skills/
+│   ├── projects/
+│   ├── references/
+│   └── contact/
+├── imprint/              # Legal notice
+├── privacy-policy/       # Privacy policy
+└── shared/
+    ├── components/       # Header and footer
+    ├── services/         # LanguageService
+    ├── translation/      # All texts in German and English
+    └── data/             # Project data
+public/
+├── fonts/                # Fira Code, Karla (hosted locally)
+├── icons/                # SVG icons
+├── images/               # Photo and project screenshots
+├── sendMail.php          # Sends the contact form as email
+└── .htaccess             # HTTPS redirect and Angular routing
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Translations
 
-## Code scaffolding
+All texts are stored in `src/app/shared/translation/translations.ts`, each with a key and a German and English version.
+The `LanguageService` stores the current language in a signal and returns the text for a key with `translate(key)`.
+When the language changes, all texts on the page update automatically.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Getting Started
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+**Requirements:** Node.js and the Angular CLI (`npm install -g @angular/cli`)
 
 ```bash
-ng generate --help
+git clone https://github.com/SebaBuch/Portfolio.git
+cd Portfolio
+npm install
+ng serve -o
 ```
 
-## Building
+The website opens at `http://localhost:4200`.
 
-To build the project run:
+> The contact form only works on a server with PHP. With `ng serve` the form shows the error message.
+
+## Build and Deployment
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Upload the content of `dist/portfolio/browser/` to the web server (Apache with PHP).
+`sendMail.php` and `.htaccess` come from `public/`. Make sure the hidden `.htaccess` file is uploaded as well.
 
-## Running unit tests
+## Author
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Sebastian Buchholz – [GitHub](https://github.com/SebaBuch)

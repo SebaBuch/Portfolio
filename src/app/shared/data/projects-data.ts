@@ -1,12 +1,22 @@
+/**
+ * Describes one project that is shown in the project list and in the overlay.
+ */
 export interface Project {
+    /** Name of the project, e.g. "El Pollo Loco" */
     name: string;
+    /** Technologies used in the project, e.g. ["HTML", "CSS"] */
     technologies: string[];
+    /** Key of the project description in translations.ts */
     descriptionKey: string;
+    /** Path to the screenshot, empty if there is none yet */
     image: string;
+    /** Link to the GitHub repository */
     github: string;
+    /** Link to the live version, empty if there is none yet */
     live: string;
 }
 
+/** All projects that are shown on the website, in display order. */
 export const projectList: Project[] = [
     {
         name: "El Pollo Loco",

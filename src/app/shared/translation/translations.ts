@@ -1,3 +1,7 @@
+/**
+ * All texts of the website. Every key has a German (de) and an English (en) version.
+ * The texts are read with LanguageService.translate(key).
+ */
 export const translations: { [key: string]: { de: string; en: string } } = {
     navAbout: { de: "Über mich", en: "About me" },
     navSkills: { de: "Skills", en: "Skills" },
