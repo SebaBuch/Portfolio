@@ -11,6 +11,9 @@
 }
 
 .ref-track {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 160px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,8 +22,8 @@
 
 .ref-card {
     position: relative;
-    flex-shrink: 0;
-    width: 520px;
+    flex: 1;
+    max-width: 520px;
     min-height: 180px;
     padding: 36px 40px;
     border: 1px solid #3dcfb6;
@@ -114,18 +117,28 @@
     background-color: #3dcfb6;
 }
 
+@media (max-width: 1200px) {
+    .ref-track {
+        padding: 0 80px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .ref-side {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
     .references {
-        padding: 72px 20px;
+        padding: 72px 0;
+    }
+
+    .ref-track {
+        padding: 0 20px;
     }
 
     .ref-card {
-        width: 100%;
-        max-width: 360px;
         padding: 28px 24px;
-    }
-
-    .ref-side {
-        display: none;
     }
 }
