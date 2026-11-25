@@ -9,9 +9,9 @@ import { LanguageService } from '../../shared/services/language-service';
 })
 export class References {
   references = [
-    { textKey: 'referenceText1', author: 'Platzhalter' },
-    { textKey: 'referenceText2', author: 'Platzhalter' },
-    { textKey: 'referenceText3', author: 'Platzhalter' }
+    { textKey: 'referenceText1', author: 'Name' },
+    { textKey: 'referenceText2', author: 'Name' },
+    { textKey: 'referenceText3', author: 'Name' }
   ];
   currentIndex = signal(0);
 

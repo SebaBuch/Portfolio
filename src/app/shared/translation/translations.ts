@@ -12,32 +12,35 @@ export const translations: { [key: string]: { de: string; en: string } } = {
     aboutLabel: { de: "Wer ich bin", en: "Who I Am" },
     aboutTitle: { de: "Über mich", en: "About me" },
     aboutText: {
-        de: "Hallo, ich bin Sebastian! [Platzhalter:]",
-        en: "Hey there, I'm Sebastian! [Placeholder:]"
+        de: "Hallo, ich bin Sebastian! Zum Programmieren bin ich übers Zocken gekommen: Mich hat fasziniert, wie aus Zeilen Code ganze Spiele und Websites entstehen. Heute entwickle ich selbst Webanwendungen, und am meisten motiviert mich, beim Programmieren meinen Fortschritt Schritt für Schritt zu sehen.",
+        en: "Hey there, I'm Sebastian! Gaming got me into programming: I was fascinated by how lines of code turn into entire games and websites. Today I build web applications myself, and what motivates me most is seeing my progress step by step while coding."
     },
     aboutLocation: {
         de: "Ich wohne in Hennef und bin offen für Remote-Arbeit oder einen Umzug.",
         en: "I'm based in Hennef and open to working remotely or relocating."
     },
     aboutMind: {
-        de: "[Platzhalter:]",
-        en: "[Placeholder:]"
+        de: "Ich lerne an der Developer Akademie und recherchiere darüber hinaus selbst, um neue Technologien zu verstehen und anzuwenden.",
+        en: "I study at the Developer Akademie and do my own research on top of that to understand and apply new technologies."
     },
     aboutQuality: {
-        de: "[Platzhalter:]",
-        en: "[Placeholder:]"
+        de: "Wenn ich nicht weiterkomme, bleibe ich ruhig und gehe alles noch einmal genau Schritt für Schritt durch, bis ich die Ursache finde.",
+        en: "When I get stuck, I stay calm and go through everything again carefully, step by step, until I find the cause."
     },
 
     skillsLabel: { de: "Technologien", en: "Technologies" },
     skillsText: {
-        de: "[Platzhalter]",
-        en: "[Placeholder]"
+        de: "Im Frontend arbeite ich mit HTML, CSS, SCSS, JavaScript, TypeScript und Angular und versioniere meinen Code mit Git. Mit jedem Projekt kommen neue Techniken dazu.",
+        en: "On the frontend I work with HTML, CSS, SCSS, JavaScript, TypeScript and Angular, and I version my code with Git. Every project adds new techniques."
     },
-    skillsAnotherStart: { de: "Platzhalter", en: "Placeholder" },
-    skillsAnotherHighlight: { de: "Platzhalter", en: "Placeholder" },
-    skillsContact: { de: "Platzhalter", en: "Placeholder" },
+    skillsAnotherStart: { de: "Als Nächstes lerne ich", en: "Next, I'm learning" },
+    skillsAnotherHighlight: { de: "Backend.", en: "backend." },
+    skillsContact: {
+        de: "Mein Ziel ist es, als Fullstack-Entwickler Frontend und Backend zu verbinden.",
+        en: "My goal is to connect frontend and backend as a fullstack developer."
+    },
     skillsButton: { de: "Lass uns reden", en: "Let's Talk" },
-    skillsBackendTooltip: { de: "[Platzhalter]", en: "[Placeholder]" },
+    skillsBackendTooltip: { de: "Python, Django, PostgreSQL, Docker", en: "Python, Django, PostgreSQL, Docker" },
 
     projectsTitle: { de: "Ausgewählte Projekte", en: "Featured Projects" },
     projectsIntro: {
@@ -47,19 +50,31 @@ export const translations: { [key: string]: { de: string; en: string } } = {
     projectQuestion: { de: "Worum geht es in diesem Projekt?", en: "What is this project about?" },
     projectNext: { de: "Nächstes Projekt", en: "Next project" },
     projectLiveTest: { de: "Live Test", en: "Live Test" },
-    projectPolloLocoDescription: { de: "Platzhalter", en: "Placeholder" },
-    projectPokedexDescription: { de: "Platzhalter", en: "Placeholder" },
-    projectBestellAppDescription: { de: "Platzhalter", en: "Placeholder" },
+    projectPolloLocoDescription: {
+        de: "Ein Jump-and-Run-Spiel auf Canvas-Basis. Die technische Herausforderung war für mich die objektorientierte Programmierung mit JavaScript-Klassen.",
+        en: "A canvas-based jump and run game. The technical challenge for me was object-oriented programming with JavaScript classes."
+    },
+    projectPokedexDescription: {
+        de: "Ein Pokédex, der alle Pokémon mit ihren Fähigkeiten anzeigt. Die Daten lädt die App über eine REST-API.",
+        en: "A Pokédex that shows all Pokémon and their abilities. The app loads its data via a REST API."
+    },
+    projectBestellAppDescription: {
+        de: "Eine Bestell-App, in der man Essen auswählen, in den Warenkorb legen und bestellen kann.",
+        en: "An ordering app where you can choose food, add it to the basket and place an order."
+    },
 
     referencesTitle: { de: "Was meine Kollegen über mich sagen", en: "What my colleagues say about me" },
-    referenceText1: { de: "Platzhalter", en: "Placeholder" },
-    referenceText2: { de: "Platzhalter", en: "Placeholder" },
-    referenceText3: { de: "Platzhalter", en: "Placeholder" },
+    referenceText1: { de: "Hier steht bald die Referenz eines Teampartners1.", en: "A reference from a team partner will appear here soon." },
+    referenceText2: { de: "Hier steht bald die Referenz eines Teampartners2.", en: "A reference from a team partner will appear here soon." },
+    referenceText3: { de: "Hier steht bald die Referenz eines Teampartners3.", en: "A reference from a team partner will appear here soon." },
 
     contactLabel: { de: "Kontakt", en: "Contact me" },
     contactTitle: { de: "Lass uns zusammenarbeiten", en: "Let's work together" },
-    contactQuestion: { de: "Platzhalter", en: "Placeholder" },
-    contactText: { de: "Platzhalter", en: "Placeholder" },
+    contactQuestion: { de: "Auf der Suche nach einem Junior-Entwickler?", en: "Looking for a junior developer?" },
+    contactText: {
+        de: "Ich suche eine Festanstellung als Junior Fullstack Developer. Wenn du ein Team hast, in dem ich mitarbeiten und weiter wachsen kann, freue ich mich über deine Nachricht.",
+        en: "I'm looking for a full-time position as a junior fullstack developer. If you have a team where I can contribute and keep growing, I'd love to hear from you."
+    },
     contactNeed: { de: "Du brauchst einen Fullstack-Entwickler?", en: "Need a Fullstack developer?" },
     contactNeedLink: { de: "Lass uns reden!", en: "Let's talk!" },
 
