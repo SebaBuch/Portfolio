@@ -24,7 +24,7 @@ export const projectList: Project[] = [
         descriptionKey: "projectPolloLocoDescription",
         image: "/images/el-pollo-loco.webp",
         github: "https://github.com/SebaBuch/El-Pollo-Loco",
-        live: "https://sebastianbuchholz.developerakademie.net/El%20Pollo%20Loco/"
+         live: "https://el-pollo-loco.sebastian-buchholz.de/"
     },
     {
         name: "Pokedex",
@@ -32,7 +32,7 @@ export const projectList: Project[] = [
         descriptionKey: "projectPokedexDescription",
         image: "/images/pokedex.webp",
         github: "https://github.com/SebaBuch/New-Pokedex",
-        live: "https://sebastianbuchholz.developerakademie.net/pokedex2/"
+        live: "https://pokedex.sebastian-buchholz.de/"
     },
     {
         name: "BestellApp",
@@ -40,6 +40,6 @@ export const projectList: Project[] = [
         descriptionKey: "projectBestellAppDescription",
         image: "/images/bestell-app.webp",
         github: "https://github.com/SebaBuch/Bestell-App",
-        live: "https://sebastianbuchholz.developerakademie.net/Bestell%20App/"
+        live: "https://bestell-app.sebastian-buchholz.de/"
     }
 ];
