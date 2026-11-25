@@ -239,3 +239,11 @@ h1 {
         font-size: 2.5rem;
     }
 }
+
+@media (max-width: 480px) {
+
+    .hero-side-left,
+    .hero-side-right {
+        top: 74%;
+    }
+}
