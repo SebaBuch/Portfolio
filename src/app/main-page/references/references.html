@@ -1,26 +1,15 @@
 <section class="references">
     <h3>{{ languageService.translate('referencesTitle') }}</h3>
 
-    @let previous = references[getPreviousIndex()];
-    @let current = references[currentIndex()];
-    @let next = references[getNextIndex()];
-
-    <div class="ref-track {{ slideClass() }}">
-        <div class="ref-card ref-side">
-            <p class="ref-text">{{ languageService.translate(previous.textKey) }}</p>
-            <p class="ref-author">{{ previous.author }}</p>
-        </div>
-
-        <div class="ref-card active">
+    <div class="ref-track {{ moveClass() }}">
+        @for (offset of offsets; track offset) {
+        @let reference = references[getIndexAt(offset)];
+        <div class="ref-card pos-{{ $index }}">
             <img class="quote" src="/icons/quotes.svg" alt="">
-            <p class="ref-text">{{ languageService.translate(current.textKey) }}</p>
-            <p class="ref-author">{{ current.author }}</p>
+            <p class="ref-text">{{ languageService.translate(reference.textKey) }}</p>
+            <p class="ref-author">{{ reference.author }}</p>
         </div>
-
-        <div class="ref-card ref-side">
-            <p class="ref-text">{{ languageService.translate(next.textKey) }}</p>
-            <p class="ref-author">{{ next.author }}</p>
-        </div>
+        }
     </div>
 
     <div class="ref-controls">
