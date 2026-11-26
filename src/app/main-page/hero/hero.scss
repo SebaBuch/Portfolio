@@ -163,6 +163,12 @@ h1 {
     }
 }
 
+@media (max-width: 1400px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+}
+
 @media (max-width: 1200px) {
     h1 {
         font-size: 4.5rem;
@@ -226,7 +232,7 @@ h1 {
         display: block;
     }
 
-    .hero-text{
+    .hero-text {
         padding: 0 20px;
     }
 
