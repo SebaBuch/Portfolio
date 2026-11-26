@@ -82,3 +82,4 @@ export class References {
     const suffix = this.slideToggle ? '-a' : '-b';
     this.slideClass.set(direction + suffix);
   }
+}
