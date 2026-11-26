@@ -103,8 +103,8 @@ button {
 }
 
 .legal {
-    min-height: 100vh;
-    padding: 160px 0 80px;
+    height: 100%;
+    padding: 120px 0 40px;
     background: linear-gradient(to bottom left, #08463b 0%, #1c1c1c 40%);
 }
 
@@ -114,7 +114,7 @@ button {
 }
 
 .legal h1 {
-    margin-bottom: 48px;
+    margin-bottom: 32px;
     color: #3dcfb6;
     font-size: 4rem;
     text-align: center;
@@ -156,6 +156,7 @@ button {
 
 .legal a {
     text-decoration: underline;
+    overflow-wrap: anywhere;
 }
 
 .legal ul {
