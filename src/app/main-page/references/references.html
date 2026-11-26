@@ -5,7 +5,7 @@
     @let current = references[currentIndex()];
     @let next = references[getNextIndex()];
 
-    <div class="ref-track">
+    <div class="ref-track {{ slideClass() }}">
         <div class="ref-card ref-side">
             <p class="ref-text">{{ languageService.translate(previous.textKey) }}</p>
             <p class="ref-author">{{ previous.author }}</p>

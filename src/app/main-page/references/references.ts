@@ -20,11 +20,15 @@ export class References {
   ];
   /** Index of the reference in the middle of the slider. */
   currentIndex = signal(0);
+  /** CSS class that starts the slide animation, e.g. "slide-next-a". */
+  slideClass = signal('');
+  /** Switches between the "a" and "b" animation so it restarts on every click. */
+  slideToggle = false;
 
   /**
    * @param languageService - Used for the translated texts
    */
-  constructor(public languageService: LanguageService) {}
+  constructor(public languageService: LanguageService) { }
 
   /**
    * Returns the index of the reference before the current one.
@@ -50,21 +54,31 @@ export class References {
     return this.currentIndex() + 1;
   }
 
-  /** Moves the slider one reference back. */
+  /** Shows the previous reference and slides the cards in from the left. */
   showPrevious() {
     this.currentIndex.set(this.getPreviousIndex());
+    this.startSlide('slide-prev');
   }
 
-  /** Moves the slider one reference forward. */
+  /** Shows the next reference and slides the cards in from the right. */
   showNext() {
     this.currentIndex.set(this.getNextIndex());
+    this.startSlide('slide-next');
   }
 
-  /**
-   * Shows a specific reference in the middle, e.g. after a click on a dot.
-   * @param index - Position of the reference in the list
-   */
+  /** Jumps to a reference via the dots and picks the slide direction. */
   showReference(index: number) {
+    if (index === this.currentIndex()) {
+      return;
+    }
+    const direction = index > this.currentIndex() ? 'slide-next' : 'slide-prev';
     this.currentIndex.set(index);
+    this.startSlide(direction);
   }
-}
+
+  /** Sets the animation class, alternating "-a" and "-b" so it runs again on every click. */
+  startSlide(direction: string) {
+    this.slideToggle = !this.slideToggle;
+    const suffix = this.slideToggle ? '-a' : '-b';
+    this.slideClass.set(direction + suffix);
+  }
