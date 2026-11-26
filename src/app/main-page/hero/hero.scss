@@ -74,6 +74,7 @@ h1 {
 
 .hero-side {
     position: absolute;
+    z-index: 1;
     bottom: 0;
     display: flex;
     flex-direction: column;
@@ -223,6 +224,10 @@ h1 {
 
     .hero-mail-icon {
         display: block;
+    }
+
+    .hero-text{
+        padding: 0 20px;
     }
 
     .marquee {
